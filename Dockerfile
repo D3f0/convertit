@@ -12,8 +12,8 @@ RUN apt-get install -y libreoffice unoconv inkscape
 # Recursive copy of repository
 ADD . /opt/apps/convertit
 # Replace repo with https
-RUN (cd /opt/apps/convertit && git remote rm origin)
-RUN (cd /opt/apps/convertit && git remote add origin https://github.com/makinacorpus/convertit.git)
+#RUN (cd /opt/apps/convertit && git remote rm origin)
+#RUN (cd /opt/apps/convertit && git remote add origin https://github.com/makinacorpus/convertit.git)
 # Install
 RUN (cd /opt/apps/convertit && make install)
 RUN /opt/apps/convertit/bin/pip install gunicorn
